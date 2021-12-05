@@ -28,7 +28,7 @@ const getRangeText = (editor: vscode.TextEditor): string | null => {
 const printStatements = (editor: vscode.TextEditor, text?: string) => {
   if (!editor) {
     vscode.window.showErrorMessage("当前编辑器崩溃，无法正常使用插件功能");
-    return;
+    return "";
   }
   const { languageId } = editor.document;
   return supportLanguage?.[languageId]?.(text);
