@@ -67,6 +67,4 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(insertPrintCommand);
 }
 
-export function deactivate() {
-  console.log("插件失活");
-}
+export function deactivate() {}

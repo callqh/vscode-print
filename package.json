@@ -1,14 +1,17 @@
 {
   "name": "js-rust-print",
-  "displayName": "一键打印Js和Rust中的选中变量",
+  "displayName": "js console & rust print",
   "description": "一个可以快速打印选中变量的插件",
   "version": "0.0.1",
   "keywords": [
     "Rust",
+    "rs",
+    "js",
     "JavaScript",
     "console",
     "print"
   ],
+  "icon": "images/icon.png",
   "publisher": "liuqh",
   "engines": {
     "vscode": "^1.62.0"
