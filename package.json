@@ -2,7 +2,7 @@
   "name": "js-rust-print",
   "displayName": "js console & rust print",
   "description": "一个可以快速打印选中变量的插件",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": [
     "Rust",
     "rs",

@@ -1,12 +1,7 @@
 import * as vscode from "vscode";
+import { SupportLanguageProps } from "./interface";
+import { runLanguagePrint } from "./supportLanguage";
 
-export type SupportLanguageProps = { [key: string]: (text?: string) => string };
-// 支持的编程语言
-const supportLanguage: SupportLanguageProps = {
-  rust: (text) => `println!("【 ${text} 】==> {:?}", ${text});`,
-  javascript: (text) => `console.log("【 ${text} 】==>",${text});`,
-  typescript: (text) => `console.log("【 ${text} 】==>",${text});`,
-};
 /**
  * 获取用户选中的字符串
  * @param editor vscode.TextEditor
@@ -31,7 +26,8 @@ const printStatements = (editor: vscode.TextEditor, text?: string) => {
     return "";
   }
   const { languageId } = editor.document;
-  return supportLanguage?.[languageId]?.(text);
+  // 判断文件的语言类型
+  return runLanguagePrint(languageId, text || "");
 };
 /**
  * 插入打印字符
